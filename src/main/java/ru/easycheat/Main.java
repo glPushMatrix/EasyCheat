@@ -85,9 +85,9 @@ public class Main implements Runnable {
 	protected List chestsPool = new ArrayList();
 	
 	protected static final String ModId = "easycheat";
-    protected static final String ModName = "EasyCheat";
-    protected static final String Version = "1.0";
-    protected static final String AcpMc = "1.7.10";
+	protected static final String ModName = "EasyCheat";
+	protected static final String Version = "1.0";
+	protected static final String AcpMc = "1.7.10";
 	protected static final String ModLang = "java";
 	
 	private boolean xredit = false;
@@ -254,26 +254,25 @@ public class Main implements Runnable {
 			this.drawStringShadow("§fBlockESP", width / 3, 1, "Ищет и обводит нужные вам блоки.", "BlockESP", Keyboard.KEY_X, true);
 			this.drawStringShadowV("§fRadius", width / 3, 1, "Радиус поиска блоков в режиме BlockESP.", "XrayRadius", 56, 200);
 			
-	        this.drawy = 6;
-	        this.drawStringShadow("§bOther", width / 3 + width / 3, 1, null, null, 0, true);
-	        this.drawy += 12;
-	        this.drawStringShadow("§fFullBright", width / 3 + width / 3, 1, "Позволяет видеть в темноте как при дневном свете.", "FullBright", Keyboard.KEY_L, true);
-
-	        
-	        this.drawy = 6;
-	        this.drawStringShadow("§bCombat", width - 6, 2, null, null, 0, false);
-	        this.drawy += 12;
-	        this.drawStringShadow("§fNONE", width - 6, 2, null, null, 0, true);
+			this.drawy = 6;
+			this.drawStringShadow("§bOther", width / 3 + width / 3, 1, null, null, 0, true);
+			this.drawy += 12;
+			this.drawStringShadow("§fFullBright", width / 3 + width / 3, 1, "Позволяет видеть в темноте как при дневном свете.", "FullBright", Keyboard.KEY_L, true);
+			
+			this.drawy = 6;
+			this.drawStringShadow("§bCombat", width - 6, 2, null, null, 0, false);
+			this.drawy += 12;
+			this.drawStringShadow("§fNONE", width - 6, 2, null, null, 0, true);
 	        
 	        int var1;
 			if(this.mc().currentScreen == this.gui && !this.xredit) {
-	            GL11.glPushMatrix();
-	            GL11.glTranslatef(width / 2, height / 2, 0.0f);
-	            GL11.glScalef(4.0f, 4.0f, 0.0f);
-	            this.drawTextWithShadow(ModName, (int) (0 - fontRenderer().getStringWidth(ModName) / 2), (int) 5);
-	            GL11.glScalef(0.5f, 0.5f, 0.0f);
-	            this.drawTextWithShadow("§f[§c" + "Coded by LeForce" + "§f]", (int) (0 - fontRenderer().getStringWidth("§f[§c" + "Coded by LeForce" + "§f]") / 2), (int) 30);
-	            GL11.glPopMatrix();
+				GL11.glPushMatrix();
+				GL11.glTranslatef(width / 2, height / 2, 0.0f);
+				GL11.glScalef(4.0f, 4.0f, 0.0f);
+				this.drawTextWithShadow(ModName, (int) (0 - fontRenderer().getStringWidth(ModName) / 2), (int) 5);
+				GL11.glScalef(0.5f, 0.5f, 0.0f);
+				this.drawTextWithShadow("§f[§c" + "Coded by LeForce" + "§f]", (int) (0 - fontRenderer().getStringWidth("§f[§c" + "Coded by LeForce" + "§f]") / 2), (int) 30);
+				GL11.glPopMatrix();
 				this.drawStringShadow("§fAdd a friend to your friends list §f(§aCtrl+F on the player§f)", 4, height - 12, 0, null, null);
 				this.drawStringShadow("§fTurn on Hide Overlay, to add friends or blocks xray.", 4, height - 24, 0, null, null);
 				this.drawStringShadow("§fAdd block to BlockESP §f(§aCtrl+X by block§f)", width - 6, height - 12, 2, null, null);
@@ -563,11 +562,11 @@ public class Main implements Runnable {
 		if(bl.size() == 0) {
 			this.blocks.put(Integer.valueOf(Block.getIdFromBlock(Block.getBlockFromName("lapis_ore"))), Integer.valueOf(-16777088));
 			this.blocks.put(Integer.valueOf(Block.getIdFromBlock(Block.getBlockFromName("redstone_ore"))), Integer.valueOf(-65536));
-	        this.blocks.put(Integer.valueOf(Block.getIdFromBlock(Block.getBlockFromName("iron_ore"))), Integer.valueOf(-10092544));
-	        this.blocks.put(Integer.valueOf(Block.getIdFromBlock(Block.getBlockFromName("gold_ore"))), Integer.valueOf(-256));
-	        this.blocks.put(Integer.valueOf(Block.getIdFromBlock(Block.getBlockFromName("emerald_ore"))), Integer.valueOf(-16711936));
-	        this.blocks.put(Integer.valueOf(Block.getIdFromBlock(Block.getBlockFromName("diamond_ore"))), Integer.valueOf(-16728065));
-	        this.saveStandardList();
+			this.blocks.put(Integer.valueOf(Block.getIdFromBlock(Block.getBlockFromName("iron_ore"))), Integer.valueOf(-10092544));
+			this.blocks.put(Integer.valueOf(Block.getIdFromBlock(Block.getBlockFromName("gold_ore"))), Integer.valueOf(-256));
+			this.blocks.put(Integer.valueOf(Block.getIdFromBlock(Block.getBlockFromName("emerald_ore"))), Integer.valueOf(-16711936));
+			this.blocks.put(Integer.valueOf(Block.getIdFromBlock(Block.getBlockFromName("diamond_ore"))), Integer.valueOf(-16728065));
+			this.saveStandardList();
 		}
 		
 		Iterator var2 = bl.iterator();
@@ -787,73 +786,73 @@ public class Main implements Runnable {
 	}
 
 	private void SpeedHack() {
-        MovementInput movementInput = mc().thePlayer.movementInput;
+		MovementInput movementInput = mc().thePlayer.movementInput;
 
-        double moveSP = this.getInt("Rapidity") / 20.0D;
+        	double moveSP = this.getInt("Rapidity") / 20.0D;
 
-        float forward = movementInput.moveForward;
-        float strafe = movementInput.moveStrafe;
-        float yaw = mc().thePlayer.rotationYaw;
+        	float forward = movementInput.moveForward;
+        	float strafe = movementInput.moveStrafe;
+        	float yaw = mc().thePlayer.rotationYaw;
 
-        if ((forward == 0.0F) && (strafe == 0.0F))
-        {
-            mc().thePlayer.motionX = 0.0D;
-            mc().thePlayer.motionZ = 0.0D;
-        }
-        else if (forward != 0.0F)
-        {
-            if (strafe >= 1.0F)
-            {
-                yaw += (forward > 0.0F ? -45 : 45);
-                strafe = 0.0F;
-            }
-            else if (strafe <= -1.0F)
-            {
-                yaw += (forward > 0.0F ? 45 : -45);
-                strafe = 0.0F;
-            }
-            if (forward > 0.0F) {
-                forward = 1.0F;
-            } else if (forward < 0.0F) {
-                forward = -1.0F;
-            }
-        }
+        	if ((forward == 0.0F) && (strafe == 0.0F))
+        	{
+			mc().thePlayer.motionX = 0.0D;
+			mc().thePlayer.motionZ = 0.0D;
+        	}
+        	else if (forward != 0.0F)
+		{
+			if (strafe >= 1.0F)
+			{
+				yaw += (forward > 0.0F ? -45 : 45);
+				strafe = 0.0F;
+            		}
+			else if (strafe <= -1.0F)
+			{
+				yaw += (forward > 0.0F ? 45 : -45);
+				strafe = 0.0F;
+			}
+			if (forward > 0.0F) {
+				forward = 1.0F;
+			} else if (forward < 0.0F) {
+				forward = -1.0F;
+			}
+		}
 
-        double mx = Math.cos(Math.toRadians(yaw + 90.0F));
-        double mz = Math.sin(Math.toRadians(yaw + 90.0F));
+		double mx = Math.cos(Math.toRadians(yaw + 90.0F));
+        	double mz = Math.sin(Math.toRadians(yaw + 90.0F));
 
-        mc().thePlayer.motionX = (forward * moveSP * mx + strafe * moveSP * mz);
-        mc().thePlayer.motionZ = (forward * moveSP * mz - strafe * moveSP * mx);
+        	mc().thePlayer.motionX = (forward * moveSP * mx + strafe * moveSP * mz);
+        	mc().thePlayer.motionZ = (forward * moveSP * mz - strafe * moveSP * mx);
 	}
 
 	/** RenderUtils **/
 	
 	private void drawESP3D(Entity entity, final double posX, final double posY, final double posZ, double width, double height, int Color) {
 		float Red = (float)(Color >> 16 & 255) / 255.0F;
-        float Green = (float)(Color >> 8 & 255) / 255.0F;
-        float Blue = (float)(Color & 255) / 255.0F;
+		float Green = (float)(Color >> 8 & 255) / 255.0F;
+        	float Blue = (float)(Color & 255) / 255.0F;
 		
-        GL11.glPushMatrix();
+        	GL11.glPushMatrix();
 		GL11.glEnable(3042);
 		GL11.glDisable(3553);
-        GL11.glDisable(2896);
-        GL11.glDisable(2929);
-        GL11.glEnable(32925);
-        GL11.glDepthMask(false);
-        GL11.glLineWidth(1.2F);
-        GL11.glEnable(2848);
-        GL11.glBlendFunc(770, 771);
+        	GL11.glDisable(2896);
+        	GL11.glDisable(2929);
+        	GL11.glEnable(32925);
+        	GL11.glDepthMask(false);
+        	GL11.glLineWidth(1.2F);
+        	GL11.glEnable(2848);
+        	GL11.glBlendFunc(770, 771);
 		GL11.glColor4f(Red, Green, Blue, 0.15f);
 		drawBoundingBox(posX - height, posY + 0.1, posZ - height, posX + height, posY + width + 0.25, posZ + height);
 		GL11.glColor4f(Red, Green, Blue, 1.0f);
 		drawOutlinedBoundingBox(posX - height, posY + 0.1, posZ - height, posX + height, posY + width + 0.25, posZ + height);
 		GL11.glDepthMask(true);
-        GL11.glDisable(3042);
-        GL11.glEnable(3553);
-        GL11.glEnable(2929);
-        GL11.glDisable(32925);
-        GL11.glDisable(2848);
-        GL11.glPopMatrix();
+        	GL11.glDisable(3042);
+        	GL11.glEnable(3553);
+        	GL11.glEnable(2929);
+        	GL11.glDisable(32925);
+        	GL11.glDisable(2848);
+        	GL11.glPopMatrix();
 	}
 	
 	private void compileESP() {
@@ -862,13 +861,13 @@ public class Main implements Runnable {
 			GL11.glNewList(this.displayListESP, 4864);
 			GL11.glPushMatrix();
 			GL11.glEnable(GL11.GL_BLEND);
-            GL11.glDisable(GL11.GL_TEXTURE_2D);
-            GL11.glDisable(2896);
-            GL11.glDisable(GL11.GL_DEPTH_TEST);
-            GL11.glEnable(GL13.GL_MULTISAMPLE);
-            GL11.glLineWidth(0.5F);
-            GL11.glEnable(GL11.GL_LINE_SMOOTH);
-            GL11.glBlendFunc(GL11.GL_SRC_ALPHA, GL11.GL_ONE_MINUS_SRC_ALPHA);
+			GL11.glDisable(GL11.GL_TEXTURE_2D);
+			GL11.glDisable(2896);
+			GL11.glDisable(GL11.GL_DEPTH_TEST);
+			GL11.glEnable(GL13.GL_MULTISAMPLE);
+			GL11.glLineWidth(0.5F);
+			GL11.glEnable(GL11.GL_LINE_SMOOTH);
+			GL11.glBlendFunc(GL11.GL_SRC_ALPHA, GL11.GL_ONE_MINUS_SRC_ALPHA);
 			this.xs3.set(false);
 			Iterator var1 = this.chestsPool.iterator();
 			while(var1.hasNext()) {
@@ -885,22 +884,22 @@ public class Main implements Runnable {
 			}
 			this.xs3.set(true);
 			GL11.glDisable(GL11.GL_BLEND);
-            GL11.glEnable(GL11.GL_TEXTURE_2D);
-            GL11.glEnable(GL11.GL_DEPTH_TEST);
-            GL11.glDisable(GL13.GL_MULTISAMPLE);
-            GL11.glDisable(GL11.GL_LINE_SMOOTH);
-            GL11.glPopMatrix();
-            GL11.glEndList();
+			GL11.glEnable(GL11.GL_TEXTURE_2D);
+			GL11.glEnable(GL11.GL_DEPTH_TEST);
+			GL11.glDisable(GL13.GL_MULTISAMPLE);
+			GL11.glDisable(GL11.GL_LINE_SMOOTH);
+			GL11.glPopMatrix();
+            		GL11.glEndList();
 			this.xs1.set(false);
 		}
 		if(this.displayListESP != -1) {
 			double posX = mc().thePlayer.lastTickPosX + (mc().thePlayer.posX - mc().thePlayer.lastTickPosX) * this.timer.renderPartialTicks;
-	        double posY = mc().thePlayer.lastTickPosY + (mc().thePlayer.posY - mc().thePlayer.lastTickPosY) * this.timer.renderPartialTicks;
-	        double posZ = mc().thePlayer.lastTickPosZ + (mc().thePlayer.posZ - mc().thePlayer.lastTickPosZ) * this.timer.renderPartialTicks;
-	        GL11.glPushMatrix();
-	        GL11.glTranslated(-posX, -posY, -posZ);
-	        GL11.glCallList(this.displayListESP);
-	        GL11.glPopMatrix();
+	        	double posY = mc().thePlayer.lastTickPosY + (mc().thePlayer.posY - mc().thePlayer.lastTickPosY) * this.timer.renderPartialTicks;
+	        	double posZ = mc().thePlayer.lastTickPosZ + (mc().thePlayer.posZ - mc().thePlayer.lastTickPosZ) * this.timer.renderPartialTicks;
+	        	GL11.glPushMatrix();
+	       		GL11.glTranslated(-posX, -posY, -posZ);
+	        	GL11.glCallList(this.displayListESP);
+	        	GL11.glPopMatrix();
 		}
 	}
 
@@ -996,8 +995,8 @@ public class Main implements Runnable {
 
     private void drawRect2D(double paramXStart, double paramYStart, double paramXEnd, double paramYEnd, int ColorLeft, int ColorRight) {
     	
-        float AlphaLeft = (float)(ColorLeft >> 24 & 255) / 255.0F;
-        float RedLeft = (float)(ColorLeft >> 16 & 255) / 255.0F;
+		float AlphaLeft = (float)(ColorLeft >> 24 & 255) / 255.0F;
+		float RedLeft = (float)(ColorLeft >> 16 & 255) / 255.0F;
         float GreenLeft = (float)(ColorLeft >> 8 & 255) / 255.0F;
         float BlueLeft = (float)(ColorLeft & 255) / 255.0F;
         
@@ -1029,20 +1028,21 @@ public class Main implements Runnable {
     }
  
     private void drawTextWithShadow(String str, int posX, int posY) {
-        int width = 0;
+		int width = 0;
         StringBuilder parColor = new StringBuilder();
+		
         for (int i = 0; i < str.length(); i++) {
-            if (str.charAt(i) == '\u00A7' && str.length() - 1 > i) {
-                parColor.append("\u00A7").append(str.charAt(i + 1));
-                i++;
-                continue;
-            }
+			if (str.charAt(i) == '\u00A7' && str.length() - 1 > i) {
+				parColor.append("\u00A7").append(str.charAt(i + 1));
+				i++;
+				continue;
+			}
             
-            int color = rainbow((float)(-1.05f * (float)i), (float)1.0f);
-            fontRenderer().drawStringWithShadow(parColor.toString() + str.charAt(i), posX + width, posY, color);
-            width += fontRenderer().getStringWidth(parColor.toString() + str.charAt(i));
-        }
-    }
+			int color = rainbow((float)(-1.05f * (float)i), (float)1.0f);
+			fontRenderer().drawStringWithShadow(parColor.toString() + str.charAt(i), posX + width, posY, color);
+			width += fontRenderer().getStringWidth(parColor.toString() + str.charAt(i));
+		}
+	}
     
 	private void renderBlock(int x, int y, int z, int par4) {
 		float Alpha = (float)(par4 >> 24 & 255) / 255.0F;
