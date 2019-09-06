@@ -271,7 +271,7 @@ public class Main implements Runnable {
 				GL11.glScalef(4.0f, 4.0f, 0.0f);
 				this.drawTextWithShadow(ModName, (int) (0 - fontRenderer().getStringWidth(ModName) / 2), (int) 5);
 				GL11.glScalef(0.5f, 0.5f, 0.0f);
-				this.drawTextWithShadow("§f[§c" + "Coded by LeForce" + "§f]", (int) (0 - fontRenderer().getStringWidth("§f[§c" + "Coded by LeForce" + "§f]") / 2), (int) 30);
+				this.drawTextWithShadow("§f[§c" + "Coded by NoName" + "§f]", (int) (0 - fontRenderer().getStringWidth("§f[§c" + "Coded by NoName" + "§f]") / 2), (int) 30);
 				GL11.glPopMatrix();
 				this.drawStringShadow("§fAdd a friend to your friends list §f(§aCtrl+F on the player§f)", 4, height - 12, 0, null, null);
 				this.drawStringShadow("§fTurn on Hide Overlay, to add friends or blocks xray.", 4, height - 24, 0, null, null);
